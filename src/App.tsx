@@ -292,7 +292,7 @@ export default function App() {
             id="main-cta-button"
           >
             <Zap className="w-4 h-4 text-white fill-white animate-bounce shrink-0" />
-            <span className="whitespace-nowrap">QUERO MEUS MARCADORES</span>
+            <span className="whitespace-nowrap">COMPRAR MARCADORES</span>
           </motion.button>
         </div>
 
@@ -396,40 +396,6 @@ export default function App() {
           </div>
 
         </section>
-
-        {/* --- SECTION 2: PROVA SOCIAL (TESTIMONIALS) --- */}
-        <section id="social-proof-section" className="w-full max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8 mt-2 mb-2 border-t border-brand-gold/15 content-visibility-auto">
-          <div className="text-center max-w-3xl mx-auto mb-8">
-            <h2 className="text-2xl sm:text-3xl font-poppins font-bold text-brand-darkblue tracking-tight mb-3">
-              Quem já adquiriu, recomenda
-            </h2>
-            <p className="text-xs sm:text-sm text-[#2B2B2B]/95 leading-relaxed font-sans">
-              Veja o que nossos clientes estão dizendo sobre os Marcadores Cristãos Premium. Milhares de pessoas já imprimiram, presentearam familiares, utilizaram em suas Bíblias e ficaram encantadas com a qualidade da coleção.
-            </p>
-          </div>
-
-          {/* Testimonial cards grid: 3 per row on desktop, 1 per row on mobile */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {TESTIMONIAL_IMAGES.map((imgUrl, index) => (
-              <div 
-                key={index}
-                className="flex flex-col justify-center items-center overflow-hidden"
-              >
-                <img 
-                  src={imgUrl} 
-                  alt={`Depoimento de cliente ${index + 1}`}
-                  referrerPolicy="no-referrer"
-                  loading="lazy"
-                  decoding="async"
-                  width={350}
-                  height={450}
-                  className="w-full h-auto rounded-2xl border border-[#C89B3C]/20 p-1 bg-white shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* --- SECTION 3: COMO UTILIZAR (3 PASSO) --- */}
         <section id="how-to-use-section" className="w-full max-w-5xl mx-auto py-8 px-4 sm:px-6 lg:px-8 mt-2 mb-6 content-visibility-auto">
           <div className="text-center max-w-3xl mx-auto mb-8">
@@ -561,166 +527,6 @@ export default function App() {
         </section>
 
 
-
-
-
-        {/* --- SECTION 6: CATEGORIAS E ORGANIZAÇÃO PREMIUM --- */}
-        <section id="collections-grid-section" className="w-full bg-[#0F3157] py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden content-visibility-auto">
-          
-          {/* Subtle decorative background lights to feel extremely high-end */}
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#154979]/40 rounded-full blur-3xl pointer-events-none"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#154979]/40 rounded-full blur-3xl pointer-events-none"></div>
-
-          <div className="max-w-6xl mx-auto relative z-10">
-            
-            {/* Header Content */}
-            <div className="text-center mb-10">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-white leading-tight tracking-tight mb-4">
-                <span className="text-[#C89B3C]">+150 Marcadores Cristãos</span> organizados em 16 coleções exclusivas
-              </h2>
-              <p className="text-sm sm:text-base text-[#E7EEF7] leading-relaxed max-w-2xl mx-auto font-sans">
-                Uma coleção completa criada para fortalecer sua caminhada com Deus. 
-                Encontre marcadores para leitura da Bíblia, estudos, devocionais, presentes, evangelismo e muito mais.
-              </p>
-            </div>
-
-            {/* Compact Modern Grid of Horizontal Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-              {[
-                { name: "Jesus Cristo", count: 25 },
-                { name: "Profetas", count: 15 },
-                { name: "Homens da Bíblia", count: 10 },
-                { name: "Mulheres da Bíblia", count: 10 },
-                { name: "Anjos", count: 10 },
-                { name: "Salmos", count: 10 },
-                { name: "Cruz e Salvação", count: 10 },
-                { name: "Apóstolos", count: 10 },
-                { name: "Milagres de Jesus", count: 10 },
-                { name: "Natureza Cristã", count: 10 },
-                { name: "Versículos Populares", count: 10 },
-                { name: "Coleção Infantil", count: 10 },
-                { name: "Coleção Feminina", count: 10 },
-                { name: "Promessas de Deus", count: 5 },
-                { name: "Fé e Esperança", count: 5 },
-                { name: "Amor e Graça", count: 5 }
-              ].map((category, index) => {
-                return (
-                  <div 
-                    key={index}
-                    className="bg-[#154979] rounded-[16px] p-3 sm:p-3.5 flex items-center justify-between shadow-xs border border-white/5 hover:border-[#C89B3C]/30 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 group cursor-default"
-                  >
-                    <div className="flex items-center gap-1.5 min-w-0 flex-1 pr-2">
-                      {/* Category Name */}
-                      <span className="text-white font-sans font-medium text-xs sm:text-sm tracking-wide leading-tight break-words">
-                        {category.name}
-                      </span>
-                    </div>
-
-                    {/* Gold Badge */}
-                    <div className="bg-[#C89B3C] text-white font-sans font-bold text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full shadow-xs group-hover:scale-105 transition-transform shrink-0">
-                      {category.count}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-          </div>
-        </section>
-
-
-        {/* --- SECTION 7: PACOTE COMPLETO --- */}
-        <section id="full-package-section" className="w-full bg-gradient-to-b from-[#F8F6F2] to-[#FFFDFC] py-10 px-4 sm:px-6 lg:px-8 border-y-2 border-[#C89B3C]/30 overflow-hidden relative shadow-inner content-visibility-auto">
-          
-          {/* Subtle elegant glowing background decorations to make it standout */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C89B3C]/5 rounded-full blur-3xl pointer-events-none"></div>
-          
-          <div className="max-w-4xl mx-auto relative z-10">
-            
-            {/* Title & Subtitle with Poppins Font */}
-            <div className="text-center mb-6">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-[#0F3157] leading-tight tracking-tight mb-3">
-                Tudo o que você irá receber
-              </h2>
-              <p className="text-sm sm:text-base text-[#2B2B2B]/90 leading-relaxed max-w-2xl mx-auto font-sans">
-                Receba acesso imediato a uma coleção exclusiva com <strong className="text-[#0F3157] font-semibold">+150 Marcadores Cristãos Premium</strong>, desenvolvidos em alta resolução e prontos para imprimir quantas vezes desejar.
-              </p>
-            </div>
-
-            
-            {/* Large Premium Card */}
-            <div className="bg-white rounded-[28px] p-5 sm:p-8 lg:p-10 shadow-md border border-[#C89B3C]/20 transition-all duration-300">
-              
-              {/* Product Mockup - Fully visible, uncut */}
-              <div className="w-full flex justify-center mb-4">
-                <div className="relative rounded-2xl overflow-hidden shadow-sm max-w-2xl w-full border border-neutral-100 bg-neutral-50 flex items-center justify-center p-2">
-                  <img 
-                    src="https://i.ibb.co/bjswWkF7/Chat-GPT-Image-26-de-jun-de-2026-20-55-33.png" 
-                    alt="Mockup do Pacote Completo"
-                    referrerPolicy="no-referrer"
-                    loading="lazy"
-                    decoding="async"
-                    width={672}
-                    height={480}
-                    className="w-full h-auto object-contain max-h-[480px] transition-transform duration-700 hover:scale-[1.01]"
-                  />
-                </div>
-              </div>
-
-              {/* Text details */}
-              <div className="text-center max-w-2xl mx-auto">
-                <p className="text-[10px] sm:text-xs font-bold text-[#C89B3C] tracking-widest uppercase mb-2">
-                  PRODUTO PRINCIPAL
-                </p>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#0F3157] leading-tight mb-4">
-                  +150 Marcadores Cristãos Premium para Imprimir
-                </h3>
-                <p className="text-xs sm:text-sm md:text-base text-[#2B2B2B]/90 leading-relaxed mb-4 font-sans">
-                  Uma coleção cuidadosamente desenvolvida para fortalecer sua caminhada com Deus através da leitura da Palavra. 
-                  São mais de <strong className="text-[#0F3157] font-semibold">150 modelos exclusivos</strong>, organizados por temas bíblicos, prontos para baixar, imprimir e utilizar sempre que desejar.
-                </p>
-
-                {/* Checklist with elegant green icons - forced 2 columns for both desktop and mobile */}
-                <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-left bg-[#F8F6F2]/70 p-4 sm:p-6 rounded-2xl border border-[#C89B3C]/10 mb-4 max-w-xl mx-auto">
-                  {[
-                    "+150 modelos exclusivos",
-                    "Arquivos em alta resolução",
-                    "Formato PDF pronto para impressão",
-                    "Tamanho 5x18 cm",
-                    "Ideal para Bíblia, livros e devocionais",
-                    "Temas organizados em categorias",
-                    "Impressão ilimitada",
-                    "Download imediato",
-                    "Compatível com qualquer impressora",
-                    "Utilize papel comum ou papel fotográfico"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-1.5 sm:gap-2.5">
-                      <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0 mt-0.5">
-                        <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 stroke-[3]" />
-                      </div>
-                      <span className="text-[10px] sm:text-xs md:text-sm text-[#2B2B2B]/90 font-medium font-sans leading-tight">
-                        {item}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Premium gold banner */}
-                <div className="bg-[#E4C97A]/15 border border-[#C89B3C]/20 rounded-xl p-4 sm:p-5 text-center shadow-xs">
-                  <p className="text-xs sm:text-sm text-[#0F3157] font-medium leading-relaxed font-sans">
-                    ✨ <strong>E ainda não acaba aqui...</strong>
-                  </p>
-                  <p className="text-xs sm:text-sm text-[#0F3157] mt-1 font-sans">
-                    Você também receberá <strong className="text-[#C89B3C] font-semibold">3 bônus exclusivos</strong> sem custo adicional.
-                  </p>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-        </section>
 
 
         {/* --- SECTION 8: BÔNUS EXCLUSIVOS --- */}
@@ -988,11 +794,9 @@ export default function App() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 mb-6 bg-[#FDFCFB] p-5 rounded-xl border border-neutral-100">
                 {[
                   "+150 marcadores exclusivos",
-                  "Formato 5x18 cm",
+                  "Garantia de 7 dias",
+                  "Compra Segura",
                   "PDF pronto para impressão",
-                  "Impressão ilimitada",
-                  "Organizados em 16 categorias cristãs",
-                  "Ideal para Bíblia, livros e devocionais",
                   "🎁 Bônus 01: Guia de Impressão Perfeita",
                   "🎁 Bônus 02: +50 Marcadores Infantis Cristãos",
                   "🎁 Bônus 03: +100 Devocionais Cristãos"
@@ -1045,7 +849,7 @@ export default function App() {
                   onClick={playSfx}
                   className="w-full py-4.5 sm:py-5 bg-gradient-to-r from-[#C89B3C] to-[#E4C97A] hover:from-[#B88A24] hover:to-[#D4B55C] text-white font-poppins font-black text-sm sm:text-lg md:text-xl lg:text-2xl rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-widest cursor-pointer flex items-center justify-center gap-2 border-b-4 border-[#9C751E] whitespace-nowrap flex-nowrap px-6 sm:px-8"
                 >
-                  <span className="whitespace-nowrap">⭐ GARANTIR MINHA COLEÇÃO ⭐</span>
+                  <span className="whitespace-nowrap">COMPRAR MARCADORES</span>
                 </motion.a>
               </div>
 
@@ -1350,8 +1154,8 @@ export default function App() {
                       </div>
                       <div>
                         <span className="text-[10px] uppercase font-bold text-brand-gold tracking-widest block">PRODUTO DIGITAL</span>
-                        <h4 className="font-serif font-bold text-xs sm:text-sm text-brand-darkblue leading-none mt-1">
-                          +150 Marcadores Cristãos de Páginas
+                        <h4 className="font-serif font-bold text-xs sm:text-sm text-brand-darkblue leading-tight mt-1">
+                          +150 Marcadores Cristãos<br />de Páginas
                         </h4>
                       </div>
                     </div>
